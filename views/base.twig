@@ -28,7 +28,7 @@
 						<a href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 					<nav>
-						{% include "menu.twig" with {'menu': menu.get_items} %}
+						{% include "partials/menu.twig" with {'menu': menu.get_items} %}
 					</nav><!-- #nav -->
 			{% endblock %}
 		</header>
@@ -49,7 +49,7 @@
 
 		{% block footer %}
 			<footer>
-				{% include 'footer.twig' %}
+				{% include 'partials/footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

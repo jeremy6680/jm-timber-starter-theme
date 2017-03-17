@@ -15,7 +15,7 @@
                     {% if post.comments %}
                         <h3> comments </h3>
                         {% for cmt in post.comments %}
-                            {% include "comment.twig" with {comment:cmt} %}
+                            {% include "partials/comment.twig" with {comment:cmt} %}
                         {% endfor %}
                     {% endif %}
 
