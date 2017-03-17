@@ -40,9 +40,9 @@
 					Sorry, no content
 				{% endblock %}
 
-			{% if dynamic_sidebar %}
+			{% if sidebar_main %}
 				<aside>
-					{{dynamic_sidebar}}
+					{% include 'partials/sidebar.twig' %}
 				</aside>
 			{% endif %}
 

@@ -10,5 +10,5 @@
 
 
 $context = array();
-$context['dynamic_sidebar'] = Timber::get_widgets('main_sidebar');
+$context['sidebar_main'] = Timber::get_widgets('sidebar--main');
 Timber::render('partials/sidebar.twig', $context);
