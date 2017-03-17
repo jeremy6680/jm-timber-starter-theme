@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the home page
+ * The template for displaying the front page
  *
  * @package  WordPress
  * @subpackage  Timber

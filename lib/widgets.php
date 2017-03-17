@@ -11,4 +11,3 @@ $class_sidebar = array(
 	'before_widget' => '<li class="">',
 );
 register_sidebar( $class_sidebar );
-?>
