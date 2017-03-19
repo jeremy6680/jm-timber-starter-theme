@@ -70,3 +70,5 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
+
+require('lib/cpt-utils.php');
