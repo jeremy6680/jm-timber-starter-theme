@@ -1,13 +1,1 @@
-{% extends "base.twig" %}
-
-{% block content %}
-
-	class="post-type-{{post.post_type}}" id="post-{{post.ID}}"
-
-	{% include 'modules/hero.twig' %}
-	
-	<h1>{{post.title}}</h1>
-	
-	{{post.content}}
-
-{% endblock %}
+{% extends "page.twig" %}
