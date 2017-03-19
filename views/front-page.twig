@@ -1,1 +1,11 @@
-{% extends "page.twig" %}
+{% extends "base.twig" %}
+
+{% block content %}
+
+	class="post-type-{{post.post_type}} {{foo}}" id="post-{{post.ID}}"
+	{{post.tagline}}
+	<h1>{{post.title}}</h1>
+	
+	{{post.content}}
+
+{% endblock %}
