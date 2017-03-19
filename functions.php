@@ -26,6 +26,7 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'init', array( $this, 'register_sidebars' ) );
+		add_action( 'init', array( $this, 'register_acf_utils' ) );
 		parent::__construct();
 	}
 
@@ -39,6 +40,10 @@ class StarterSite extends TimberSite {
 
 	function register_sidebars() {
     	require('lib/widgets.php');
+	}
+
+	function register_acf_utils() {
+    	require('lib/acf-utils.php');
 	}
 
 	function add_to_context( $context ) {
@@ -65,18 +70,3 @@ class StarterSite extends TimberSite {
 }
 
 new StarterSite();
-
-/* Create an options page */
-if( function_exists('acf_add_options_page') ) {
-	
-	acf_add_options_page();
-	
-}
-
-/* Use options info site wide — cf http://timber.github.io/timber/#acf-cookbook */
-add_filter( 'timber_context', 'mytheme_timber_context'  );
-
-function mytheme_timber_context( $context ) {
-    $context['options'] = get_fields('option');
-    return $context;
-}
