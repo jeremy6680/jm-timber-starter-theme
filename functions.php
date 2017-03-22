@@ -27,6 +27,7 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_action( 'init', array( $this, 'register_sidebars' ) );
 		add_action( 'init', array( $this, 'register_acf_utils' ) );
+		add_action( 'init', array( $this, 'create_breadcrumbs' ) );
 		parent::__construct();
 	}
 
@@ -44,6 +45,10 @@ class StarterSite extends TimberSite {
 
 	function register_acf_utils() {
     	require('lib/acf-utils.php');
+	}
+
+	function create_breadcrumbs() {
+    	require('lib/breadcrumbs.php');
 	}
 
 	function add_to_context( $context ) {

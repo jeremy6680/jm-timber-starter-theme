@@ -26,5 +26,7 @@ $post = new TimberPost();
 $context['post'] = $post;
 if ( function_exists( 'yoast_breadcrumb' ) ) {
     $context['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
+} else {
+	$context['breadcrumbs'] = TimberHelper::function_wrapper( 'the_breadcrumb' );
 }
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
