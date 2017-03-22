@@ -17,7 +17,9 @@
 $templates = array( 'archive.twig', 'index.twig' );
 
 $context = Timber::get_context();
-
+if ( function_exists( 'yoast_breadcrumb' ) ) {
+    $context['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
+}
 $context['title'] = 'Archive';
 if ( is_day() ) {
 	$context['title'] = 'Archive: '.get_the_date( 'D M Y' );

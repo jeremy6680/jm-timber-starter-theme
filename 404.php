@@ -10,4 +10,7 @@
  */
 
 $context = Timber::get_context();
+if ( function_exists( 'yoast_breadcrumb' ) ) {
+    $context['breadcrumbs'] = yoast_breadcrumb('<nav id="breadcrumbs" class="main-breadcrumbs">','</nav>', false );
+}
 Timber::render( '404.twig', $context );

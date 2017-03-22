@@ -33,9 +33,9 @@
 					</nav><!-- #nav -->
 			{% endblock %}
 		</header>
-		
+
 		{% if breadcrumbs %}
-		{{breadcrumbs}}
+		{% include 'partials/breadcrumbs.twig' %}
 		{% endif %}
 
 			{% if title %}<h1>{{title}}</h1>{% endif %}
