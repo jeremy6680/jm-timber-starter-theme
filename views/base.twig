@@ -33,7 +33,10 @@
 					</nav><!-- #nav -->
 			{% endblock %}
 		</header>
-
+		
+		{% if breadcrumbs %}
+		{{breadcrumbs}}
+		{% endif %}
 
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 
