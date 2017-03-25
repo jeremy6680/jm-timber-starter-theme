@@ -1,7 +1,15 @@
 {% extends "base.twig" %}
 
-{% block content %}
+{% block main %}
+
+    {% block title %}
+
+      <h1>{{title}}</h1>
+
+    {% endblock %}
+
 	{% for post in posts %}
 		{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
 	{% endfor %}
+	
 {% endblock %}

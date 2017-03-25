@@ -35,18 +35,16 @@
 		{% if breadcrumbs %}
 		{% include 'partials/breadcrumbs.twig' %}
 		{% endif %}
-	
-			{% if title %}<h1>{{title}}</h1>{% endif %}
 
-				{% block content %}
+				{% block main %}
 					Sorry, no content
 				{% endblock %}
 
-			{% if sidebar_main %}
-				<aside>
-					{% include 'partials/sidebar.twig' %}
-				</aside>
-			{% endif %}
+				{% if sidebar_main %}
+					<aside>
+						{% include 'partials/sidebar.twig' %}
+					</aside>
+				{% endif %}
 
 		{% block footer %}
 			<footer>

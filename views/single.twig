@@ -1,22 +1,19 @@
-{% extends "base.twig" %}
+{% extends "page.twig" %}
 
-{% block content %}
-	
-    class="post-type-{{post.post_type}}" id="post-{{post.ID}}"
+    {% block meta %}
+        By <a href="{{post.author.path}}"> {{ post.author.name }} </a>
+                    {{ post.post_date|date}}
+    {% endblock %}
 
-				<h1>{{post.title}}</h1>
-				By <a href="{{post.author.path}}"> {{ post.author.name }} </a>
-                {{ post.post_date|date}}
+    {% block comment %}
+    		
+    <!-- comments -->
 
-					{{post.content}}
+        {% if post.comments %}
+            <h3> comments </h3>
+            {% for cmt in post.comments %}
+                {% include "partials/comment.twig" with {comment:cmt} %}
+            {% endfor %}
+        {% endif %}
 
-                <!-- comments -->
- 
-                    {% if post.comments %}
-                        <h3> comments </h3>
-                        {% for cmt in post.comments %}
-                            {% include "partials/comment.twig" with {comment:cmt} %}
-                        {% endfor %}
-                    {% endif %}
-
-{% endblock %}
+    {% endblock %}

@@ -1,11 +1,10 @@
 {% extends "base.twig" %}
 
-{% block content %}
+	{% block main %}
 
-	class="post-type-{{post.post_type}} {{foo}}" id="post-{{post.ID}}"
-	{{post.tagline}}
-	<h1>{{post.title}}</h1>
-	
-	{{post.content}}
+		<h1>{{post.title}}</h1>
+		{{post.tagline}}
+		
+		{{post.content}}
 
-{% endblock %}
+	{% endblock %}

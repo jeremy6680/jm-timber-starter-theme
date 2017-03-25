@@ -1,5 +1,15 @@
-{% extends "base.twig" %}
+{% extends "page.twig" %}
 
-{% block content %}
-	Sorry, we couldn't find what you're looking for.
-{% endblock %}
+	{% block title %}
+
+		<h1>Oups, that's the 404 page!</h1>
+
+	{% endblock %}
+
+	{% block content %}
+
+		<p>Sorry, we couldn't find what you're looking for.</p>
+		
+		{% include "partials/searchform.twig" %} 
+
+	{% endblock %}
