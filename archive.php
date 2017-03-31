@@ -23,6 +23,7 @@ if ( function_exists( 'yoast_breadcrumb' ) ) {
 } else {
 	$context['breadcrumbs'] = TimberHelper::function_wrapper( 'the_breadcrumb' );
 }
+$context['pagination'] = Timber::get_pagination();
 $context['posts'] = Timber::get_posts();
 
 Timber::render( $templates, $context );

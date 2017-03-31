@@ -46,6 +46,10 @@
 					</aside>
 				{% endif %}
 
+		{% if pagination %}
+		{% include 'partials/pagination.twig' %}
+		{% endif %}
+		
 		{% block footer %}
 			<footer>
 				{% include 'partials/footer.twig' %}
